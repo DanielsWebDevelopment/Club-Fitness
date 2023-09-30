@@ -1,0 +1,2098 @@
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Alfa+Slab+One&family=Anton&family=Bangers&family=Bebas+Neue&family=Carlito:wght@700&family=Castoro+Titling&family=Cormorant+Garamond&family=Fjalla+One&family=Gilda+Display&family=Gloock&family=Goblin+One&family=Holtwood+One+SC&family=Inter&family=Kanit&family=Konkhmer+Sleokchher&family=Koulen&family=Lato:wght@300;400;700&family=Lilita+One&family=Merriweather:ital@0;1&family=Montserrat:wght@300;400;500;600;700&family=Open+Sans:wght@400;700&family=Oswald:wght@200;400&family=Permanent+Marker&family=Poppins:wght@100;200;300;400;500&family=Rajdhani:wght@700&family=Righteous&family=Roboto+Condensed:ital@1&family=Roboto:wght@300&family=Ruda:wght@600&family=Rufina&family=Russo+One&family=Share+Tech+Mono&family=Shrikhand&family=Slabo+27px&family=Squada+One&family=Ubuntu:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+html,
+body {
+  height: 100vh;
+  width: 100%;
+  overflow-x: hidden;
+  background-color: #020202;
+  color: #fff;
+}
+
+a {
+  color: #fff;
+}
+
+.navbar {
+  min-height: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 24px;
+}
+
+.nav-menu li {
+  list-style: none;
+}
+
+.nav-menu li a {
+  font-size: 12px;
+  text-decoration: none;
+  transition: 0.4s;
+}
+
+.nav-menu li a:hover {
+  color: #ee9e08;
+}
+
+.nav-menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo {
+  text-decoration: none;
+  font-size: 28px;
+  font-weight: 300;
+}
+
+.active {
+  color: #ee9e08;
+}
+
+.hamburger {
+  position: relative;
+  display: block;
+  width: 35px;
+  cursor: pointer;
+
+  appearance: none;
+  background: none;
+  outline: none;
+  border: none;
+}
+
+@media (min-width: 768px) {
+  .mobile-nav {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-menu {
+    display: none;
+  }
+  .hamburger {
+    position: relative;
+    left: 250px;
+  }
+}
+
+.hamburger .bar,
+.hamburger::after,
+.hamburger::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 5px;
+  background-color: #fff;
+  margin: 6px 0px;
+  transition: 0.4s;
+}
+
+.hamburger.is-active::before {
+  transform: rotate(-45deg) translate(-7px, 7px);
+}
+
+.hamburger.is-active .bar {
+  opacity: 0;
+}
+
+.hamburger.is-active::after {
+  transform: rotate(45deg) translate(-8px, -8px);
+}
+
+.mobile-nav {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 100%;
+  width: 100%;
+  min-height: 100vh;
+  z-index: 98;
+  background-color: #313131;
+  padding-top: 120px;
+  transition: 0.4s;
+}
+
+.mobile-nav.is-active {
+  left: 0;
+}
+
+.mobile-nav a {
+  display: block;
+  text-align: center;
+  margin: 0 auto 16px;
+  padding: 12px 16px;
+  background-color: #1d1d1cf5;
+  width: 90%;
+  border-radius: 8px;
+  transition: 0.4s;
+  text-decoration: none;
+}
+
+.mobile-nav a:hover {
+  background-color: #525151;
+}
+
+/* ==================Main Header Section
+================== */
+.main-video {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrapper {
+  width: 700px;
+  height: 550px;
+  background-color: #1a1919;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.aboutus_info {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.aboutus_info h1 {
+  font-weight: 300;
+  margin-bottom: 50px;
+  font-size: 48px;
+}
+
+.aboutus_info p {
+  position: relative;
+  bottom: 35px;
+  font-weight: 200;
+  font-size: 18px;
+  line-height: 1.8;
+}
+
+.aboutus-img {
+  margin-top: 5px;
+  display: flex;
+  justify-content: center;
+}
+
+.aboutus-img img {
+  width: 100%;
+}
+
+.classes-container {
+  margin-top: 750px;
+}
+
+.classes-wrapper {
+  width: 700px;
+  height: 640px;
+  background-color: #1a1919;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  bottom: 100px;
+}
+
+.classes-info {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.classes-info h1 {
+  font-size: 48px;
+  font-weight: 300;
+}
+
+.classes-info p {
+  font-weight: 200;
+  font-size: 18px;
+  line-height: 1.8;
+}
+
+.classes-cta {
+  position: relative;
+  top: 20px;
+  background-color: #585858;
+  padding: 8px 25px;
+  border-radius: 5px;
+  transition: 0.4s;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.classes-cta:hover {
+  background-color: #818181;
+}
+
+.training_img {
+  position: relative;
+  bottom: 100px;
+  display: flex;
+  justify-content: center;
+}
+
+.training_img img {
+  width: 100%;
+}
+
+.training_wrapper {
+  width: 700px;
+  height: 1340px;
+  background-color: #1a1919;
+  margin: 0px auto;
+}
+
+.training_info {
+  position: relative;
+  bottom: 50px;
+  text-align: center;
+}
+
+.training_info h1 {
+  font-size: 48px;
+  font-weight: 300;
+}
+
+.training-sub-info {
+  margin-top: 20px;
+  font-weight: 200;
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+.training_cta {
+  position: relative;
+  top: 20px;
+  background-color: #585858;
+  padding: 8px 25px;
+  border-radius: 5px;
+  transition: 0.4s;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.cta_links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.cta_links a {
+  font-size: 14px;
+}
+
+.training_cta:hover {
+  background-color: #818181;
+}
+
+.kids_zone__container {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.zone-image {
+  margin-top: 5px;
+  display: flex;
+  justify-content: center;
+}
+
+.zone-image img {
+  width: 100%;
+}
+
+.zone-wrapper {
+  width: 700px;
+  height: 1340px;
+  background-color: #1a1919;
+  margin: 0px auto;
+}
+
+.zone_info {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.zone_info h1 {
+  font-size: 48px;
+  font-weight: 300;
+}
+
+.zone_info p {
+  font-weight: 200;
+  font-size: 18px;
+  line-height: 1.8;
+}
+
+.zone-cta_links {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.zone-cta_links a {
+  background-color: #585858;
+  padding: 5px 25px;
+  border-radius: 5px;
+  transition: 0.4s;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.zone-cta_links a:hover {
+  background-color: #818181;
+}
+
+.tanning_info1 {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.tanning_info1 h1 {
+  font-size: 48px;
+  font-weight: 300;
+}
+
+.tanning_info1 p {
+  font-weight: 200;
+  font-size: 18px;
+  line-height: 1.8;
+}
+
+.tanning_sub-info {
+  font-size: 10px;
+}
+
+.footer-form input {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer_title h1 {
+  font-weight: 400;
+}
+
+label {
+  font-size: 13px;
+}
+
+form input {
+  background-color: #000000;
+  color: #fff;
+  width: 190px;
+  height: 30px;
+  border: none;
+  outline: none;
+  margin: 5px;
+}
+
+.line {
+  height: 2px;
+  width: 100%;
+  background-color: #fff;
+  transition: 0.2s;
+}
+
+.line:hover {
+  background-color: #000000;
+}
+
+.footer_info_sec h2 {
+  font-weight: 300;
+  letter-spacing: 0.1rem;
+  position: relative;
+  top: 8px;
+}
+
+.footer-info small {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.footer-info span {
+  font-family: 300;
+  font-size: 13px;
+}
+
+.footer_lists h6 {
+  font-size: 14px;
+  position: relative;
+  right: 35px;
+}
+
+.footer_list-li {
+  font-size: 12px;
+}
+
+.footer_container {
+  margin-top: 60px;
+}
+
+.footer-main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+}
+
+.submit {
+  height: 30px;
+  background-color: #fff;
+  border-radius: 50px;
+  width: 130px;
+  font-weight: 600;
+  font-size: 12px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+textarea {
+  border: none;
+  outline: none;
+  background-color: #000000;
+  color: #fff;
+  margin-top: 30px;
+}
+
+textarea::placeholder {
+  color: #fff;
+}
+
+.footer_info_sec {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.footer_display_images {
+  margin-top: 80px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  padding: 0 34px;
+}
+
+.footer_display_images img {
+  height: 250px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+form button {
+  transition: 0.4s;
+}
+
+form button:hover {
+  background-color: #ee9e08;
+  color: #fff;
+}
+
+.footer-content {
+  background-color: #ffffff13;
+  border-radius: 5px;
+  padding: 5px;
+  transition: 0.5s;
+  font-size: 14px;
+}
+
+.footer-content:hover {
+  background-color: #ffffff;
+  color: #333;
+}
+
+.footer-info a{
+  transition: 0.5s;
+}
+
+.footer-info a:hover {
+  color: #ee9e08;
+}
+
+.google_maps {
+  margin-top: 70px;
+  display: flex;
+  justify-content: center;
+}
+
+.copyright-info span {
+  margin-top: 30px;
+  font-size: 12px;
+}
+
+.copyright {
+  text-align: center;
+}
+
+@media (min-width: 400px) and (max-width: 598px){
+  .logo {
+    text-decoration: none;
+    font-size: 28px;
+    font-weight: 300;
+    position: relative;
+    right: 130px;
+  }
+
+  .hamburger {
+    position: relative;
+    right: 250px;
+    display: block;
+    width: 35px;
+    cursor: pointer;
+
+    appearance: none;
+    background: none;
+    outline: none;
+    border: none;
+  }
+
+  .hamburger .bar,
+  .hamburger::after,
+  .hamburger::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 5px;
+    background-color: #fff;
+    margin: 6px 0px;
+    transition: 0.4s;
+    position: relative;
+    right: 130px;
+  }
+
+  .aboutus_info {
+    text-align: center;
+    margin-top: 30px;
+    position: relative;
+    right: 110px;
+  }
+  
+  .aboutus_info h1 {
+    font-weight: 300;
+    margin-bottom: 50px;
+    font-size: 46px;
+  }
+  
+  .aboutus_info p {
+    position: relative;
+    bottom: 35px;
+    font-weight: 200;
+    font-size: 16px;
+    line-height: 1.8;
+  }
+
+  .aboutus-img img {
+    width: 80%;
+    height: 750px;
+    position: relative;
+    right: 80px;
+  }
+/* about wrapper */
+
+  .classes-info {
+    text-align: center;
+    margin-top: 30px;
+    position: relative;
+    right: 110px;
+  }
+  
+  .classes-info h1 {
+    font-size: 46px;
+    font-weight: 300;
+  }
+  
+  .classes-info p {
+    font-weight: 200;
+    font-size: 16px;
+    line-height: 1.8;
+  }
+
+  .training_info {
+    position: relative;
+    right: 110px;
+    bottom: 50px;
+    text-align: center;
+  }
+  
+  .training_info h1 {
+    font-size: 46px;
+    font-weight: 300;
+  }
+  
+  .training-sub-info {
+    margin-top: 20px;
+    font-weight: 200;
+    font-size: 16px;
+    line-height: 1.7;
+  }
+
+  .training_img img {
+    width: 80%;
+    height: 750px;
+    position: relative;
+    right: 80px;
+  }
+
+  .zone_info {
+    text-align: center;
+    margin-top: 50px;
+    position: relative;
+    right: 110px;
+  }
+  
+  .zone_info h1 {
+    font-size: 46px;
+    font-weight: 300;
+  }
+  
+  .zone_info p {
+    font-weight: 200;
+    font-size: 16px;
+    line-height: 1.8;
+  }
+
+  .zone-image img {
+    width: 80%;
+    height: 750px;
+    position: relative;
+    right: 80px;
+  }
+
+ 
+  .tanning_info1 {
+    text-align: center;
+    margin-top: 50px;
+    position: relative;
+    right: 110px;
+  }
+  
+  .tanning_info1 h1 {
+    font-size: 48px;
+    font-weight: 300;
+  }
+  
+  .tanning_info1 p {
+    font-weight: 200;
+    font-size: 18px;
+    line-height: 1.8;
+  }
+
+  .footer-main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    right: 100px;
+    gap: 60px;
+  }
+
+  .footer_display_images img {
+    height: 400px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .google_maps-container iframe{
+    width: 120%;
+    height: 450px;
+    position: relative;
+    right: 25px;
+    border-radius: 5px;
+  }
+
+  .zone-wrapper {
+    width: 700px;
+    height: 1380px;
+    background-color: #1a1919;
+    margin: 0px auto;
+  }
+
+  .tan1 {
+    width: 100%;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 768px){
+  .logo {
+    text-decoration: none;
+    font-size: 30px;
+    font-weight: 300;
+    position: relative;
+    right: 200px;
+  }
+
+  .hamburger .bar,
+  .hamburger::after,
+  .hamburger::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 5px;
+    background-color: #fff;
+    margin: 6px 0px;
+    transition: 0.4s;
+    position: relative;
+    right: 30px;
+  }
+
+  .aboutus_info {
+    text-align: center;
+    margin-top: 30px;
+  }
+  
+  .aboutus_info h1 {
+    font-weight: 300;
+    margin-bottom: 50px;
+    font-size: 52px;
+  }
+  
+  .aboutus_info p {
+    position: relative;
+    bottom: 35px;
+    font-weight: 200;
+    font-size: 16px;
+    line-height: 1.8;
+  }
+
+  .aboutus-img img {
+    width: 100%;
+    height: 750px;
+  }
+
+  .classes-info {
+    text-align: center;
+    margin-top: 30px;
+  }
+  
+  .classes-info h1 {
+    font-size: 52px;
+    font-weight: 300;
+  }
+  
+  .classes-info p {
+    font-weight: 200;
+    font-size: 16px;
+    line-height: 1.8;
+  }
+
+  .training_info {
+    position: relative;
+    bottom: 50px;
+    text-align: center;
+  }
+  
+  .training_info h1 {
+    font-size: 52px;
+    font-weight: 300;
+  }
+  
+  .training-sub-info {
+    margin-top: 20px;
+    font-weight: 200;
+    font-size: 16px;
+    line-height: 1.7;
+  }
+
+  .zone_info {
+    text-align: center;
+    margin-top: 50px;
+  }
+  
+  .zone_info h1 {
+    font-size: 46px;
+    font-weight: 300;
+  }
+  
+  .zone_info p {
+    font-weight: 200;
+    font-size: 16px;
+    line-height: 1.8;
+  }
+
+  .footer-main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+  }
+
+  .footer_display_images img {
+    height: 310px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .google_maps-container iframe{
+    width: 210%;
+    height: 450px;
+    position: relative;
+    right: 165px;
+    border-radius: 5px;
+  }
+
+  .tan1 {
+    width: 100%;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 900px){
+  .nav-menu {
+    display: none;
+  }
+
+  .logo {
+    text-decoration: none;
+    font-size: 33px;
+    font-weight: 300;
+    position: relative;
+    right: 250px;
+  }
+
+  .hamburger .bar,
+  .hamburger::after,
+  .hamburger::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 5px;
+    background-color: #fff;
+    margin: 6px 0px;
+    transition: 0.4s;
+    margin-left: 250px;
+  }
+
+  .footer_display_images img {
+    height: 350px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .google_maps-container iframe{
+    width: 250%;
+    height: 450px;
+    position: relative;
+    right: 225px;
+    border-radius: 5px;
+  }
+
+  .tan1 {
+    width: 100%;
+  }
+}
+
+@media (min-width: 901px) and (max-width: 1024px){
+  .hamburger .bar,
+  .hamburger::after,
+  .hamburger::before {
+    display: none;
+  }
+
+  .logo {
+    text-decoration: none;
+    font-size: 33px;
+    font-weight: 300;
+    position: relative;
+    right: 70px;
+  }
+
+  .wrapper {
+    width: 1005px;
+    height: 750px;
+    background-color: #1a1919;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .aboutus_info {
+    text-align: center;
+    margin-top: 170px;
+  }
+
+  .aboutus_info h1 {
+    font-weight: 300;
+    margin-bottom: 50px;
+    font-size: 52px;
+  }
+  
+  .aboutus_info p {
+    position: relative;
+    bottom: 35px;
+    font-weight: 200;
+    font-size: 16px;
+    line-height: 1.8;
+  }
+
+  .aboutus-img img {
+    width: 100%;
+    height: 750px;
+  }
+
+  .classes-container {
+    margin-top: 750px;
+  }
+  
+  .classes-wrapper {
+    width: 1180px;
+    height: 750px;
+    background-color: #1a1919;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    position: relative;
+    bottom: 750px;
+    right: 150px;
+  }
+  
+  .classes-info {
+    text-align: center;
+    margin-top: 30px;
+    position: relative;
+    left: 600px;
+  }
+  
+  .classes-info h1 {
+    font-size: 48px;
+    font-weight: 300;
+  }
+  
+  .classes-info p {
+    font-weight: 200;
+    font-size: 18px;
+    line-height: 1.8;
+  }
+  
+  .training_img img {
+    width: 490px;
+    height: 1040px;
+    position: relative;
+    top: 160px;
+  }
+  
+  .training_wrapper {
+    width: 100%;
+    height: 700px;
+    background-color: #1a1919;
+    margin: 0px auto;
+    display: flex;
+    position: relative;
+    bottom: 850px;
+  }
+  
+  .training_info {
+    position: relative;
+    bottom: 50px;
+    left: 80px;
+    top: 100px;
+    text-align: center;
+  }
+  
+  .training_info h1 {
+    font-size: 48px;
+    font-weight: 300;
+  }
+  
+  .training-sub-info {
+    margin-top: 20px;
+    font-weight: 200;
+    font-size: 18px;
+    line-height: 1.7;
+  }
+
+  .kids_zone__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    position: relative;
+    bottom: 850px;
+  }
+  
+  .zone-image {
+    margin-top: 5px;
+  }
+  
+  .zone-image img {
+    width: 500px;
+    height: 700px;
+    position: relative;
+    left: 15px;
+    top: 100px;
+  }
+  
+  .zone-wrapper {
+    width: 150%;
+    height: 800px;
+    background-color: #1a1919;
+    margin: 0px auto;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+  }
+  
+  .zone_info {
+    text-align: center;
+    margin-top: 120px;
+    position: relative;
+    right: 50px;
+  }
+  
+  .zone_info h1 {
+    font-size: 48px;
+    font-weight: 300;
+  }
+  
+  .zone_info p {
+    font-weight: 200;
+    font-size: 18px;
+    line-height: 1.8;
+  }
+
+  .tanning_info1 {
+    text-align: center;
+    margin-top: 50px;
+    position: relative;
+    left: 450px;
+    top: 50px;
+  }
+  
+  .tanning_info1 h1 {
+    font-size: 48px;
+    font-weight: 300;
+  }
+  
+  .tanning_info1 p {
+    font-weight: 200;
+    font-size: 18px;
+    line-height: 1.8;
+  }
+  
+  .tanning_sub-info {
+    font-size: 10px;
+  }
+
+  .tan1 {
+    position: relative;
+    right: 500px;
+  }
+
+  .footer_container {
+    position: relative;
+    bottom: 750px;
+  }
+
+  .footer_display_images img {
+    height: 400px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .google_maps-container iframe{
+    width: 250%;
+    height: 450px;
+    position: relative;
+    right: 225px;
+    bottom: 550px;
+    border-radius: 5px;
+  }
+
+  .copyright-info span {
+    margin-top: 30px;
+    font-size: 12px;
+  }
+  
+  .copyright {
+    text-align: center;
+    position: relative;
+    bottom: 150px;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1200px){
+  .hamburger .bar,
+  .hamburger::after,
+  .hamburger::before {
+    display: none;
+  }
+
+  .logo {
+    text-decoration: none;
+    font-size: 33px;
+    font-weight: 300;
+    position: relative;
+    right: 80px;
+  }
+
+  .wrapper {
+    width: 1105px;
+    height: 750px;
+    background-color: #1a1919;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .aboutus_info {
+    text-align: center;
+    margin-top: 170px;
+  }
+
+  .aboutus_info h1 {
+    font-weight: 300;
+    margin-bottom: 50px;
+    font-size: 52px;
+  }
+  
+  .aboutus_info p {
+    position: relative;
+    bottom: 35px;
+    font-weight: 200;
+    font-size: 18px;
+    line-height: 1.8;
+  }
+
+  .aboutus-img img {
+    width: 100%;
+    height: 750px;
+  }
+
+  .classes-container {
+    margin-top: 750px;
+  }
+  
+  .classes-wrapper {
+    width: 1280px;
+    height: 650px;
+    background-color: #1a1919;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    position: relative;
+    bottom: 750px;
+    right: 150px;
+  }
+  
+  .classes-info {
+    text-align: center;
+    margin-top: 30px;
+    position: relative;
+    left: 650px;
+  }
+  
+  .classes-info h1 {
+    font-size: 48px;
+    font-weight: 300;
+  }
+  
+  .classes-info p {
+    font-weight: 200;
+    font-size: 18px;
+    line-height: 1.8;
+  }
+
+  .training_img img {
+    width: 490px;
+    height: 700px;
+    position: relative;
+    top: 160px;
+  }
+  
+  .training_wrapper {
+    width: 100%;
+    height: 760px;
+    background-color: #1a1919;
+    margin: 0px auto;
+    display: flex;
+    position: relative;
+    bottom: 850px;
+  }
+  
+  .training_info {
+    position: relative;
+    bottom: 50px;
+    left: 150px;
+    top: 100px;
+    text-align: center;
+  }
+  
+  .training_info h1 {
+    font-size: 48px;
+    font-weight: 300;
+  }
+  
+  .training-sub-info {
+    margin-top: 20px;
+    font-weight: 200;
+    font-size: 18px;
+    line-height: 1.7;
+  }
+
+  .kids_zone__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    position: relative;
+    bottom: 850px;
+    width: 150%;
+  }
+  
+  .zone-image {
+    margin-top: 5px;
+  }
+  
+  .zone-image img {
+    width: 500px;
+    height: 700px;
+    position: relative;
+    left: 42px;
+    top: 100px;
+  }
+  
+  .zone-wrapper {
+    width: 150%;
+    height: 800px;
+    background-color: #1a1919;
+    margin: 0px auto;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+  }
+  
+  .zone_info {
+    text-align: center;
+    margin-top: 120px;
+    position: relative;
+    right: 100px;
+  }
+  
+  .zone_info h1 {
+    font-size: 48px;
+    font-weight: 300;
+  }
+  
+  .zone_info p {
+    font-weight: 200;
+    font-size: 18px;
+    line-height: 1.8;
+  }
+
+  .tanning_info1 {
+    text-align: center;
+    margin-top: 50px;
+    position: relative;
+    left: 450px;
+    top: 100px;
+  }
+  
+  .tanning_info1 h1 {
+    font-size: 48px;
+    font-weight: 300;
+  }
+  
+  .tanning_info1 p {
+    font-weight: 200;
+    font-size: 18px;
+    line-height: 1.8;
+  }
+  
+  .tanning_sub-info {
+    font-size: 10px;
+  }
+
+  .tan1 {
+    position: relative;
+    right: 590px;
+    bottom: 5px;
+  }
+
+  .footer_container {
+    position: relative;
+    bottom: 750px;
+  }
+
+  .footer_display_images img {
+    height: 500px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .google_maps-container iframe{
+    width: 300%;
+    height: 550px;
+    position: relative;
+    right: 305px;
+    bottom: 550px;
+    border-radius: 5px;
+  }
+
+  .copyright-info span {
+    margin-top: 30px;
+    font-size: 12px;
+  }
+  
+  .copyright {
+    text-align: center;
+    position: relative;
+    bottom: 150px;
+  }
+
+  .nav-menu {
+    position: relative;
+    right: 30px;
+  }
+
+  .nav-menu li a {
+    font-size: 14px;
+    text-decoration: none;
+  }
+}
+
+@media (min-width: 1201px) and (max-width: 1400px){
+  .hamburger .bar,
+  .hamburger::after,
+  .hamburger::before {
+    display: none;
+  }
+
+  .logo {
+    text-decoration: none;
+    font-size: 33px;
+    font-weight: 300;
+    position: relative;
+    right: 80px;
+  }
+
+  .wrapper {
+    width: 100%;
+    height: 750px;
+    background-color: #1a1919;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .aboutus_info {
+    text-align: center;
+    margin-top: 170px;
+  }
+
+  .aboutus_info h1 {
+    font-weight: 300;
+    margin-bottom: 50px;
+    font-size: 52px;
+  }
+  
+  .aboutus_info p {
+    position: relative;
+    bottom: 35px;
+    font-weight: 200;
+    font-size: 18px;
+    line-height: 1.8;
+  }
+
+  .aboutus-img img {
+    width: 100%;
+    height: 750px;
+  }
+
+  .classes-container {
+    margin-top: 750px;
+  }
+  
+  .classes-wrapper {
+    width: 150%;
+    height: 650px;
+    background-color: #1a1919;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    position: relative;
+    bottom: 750px;
+    right: 150px;
+  }
+  
+  .classes-info {
+    text-align: center;
+    margin-top: 30px;
+    position: relative;
+    left: 650px;
+  }
+  
+  .classes-info h1 {
+    font-size: 48px;
+    font-weight: 300;
+  }
+  
+  .classes-info p {
+    font-weight: 200;
+    font-size: 18px;
+    line-height: 1.8;
+  }
+
+  .training_img img {
+    width: 650px;
+    height: 700px;
+    position: relative;
+    top: 160px;
+  }
+  
+  .training_wrapper {
+    width: 100%;
+    height: 760px;
+    background-color: #1a1919;
+    margin: 0px auto;
+    display: flex;
+    flex-direction: row-reverse;
+    position: relative;
+    bottom: 850px;
+  }
+  
+  .training_info {
+    position: relative;
+    bottom: 50px;
+    right: 250px;
+    top: 100px;
+    text-align: center;
+  }
+  
+  .training_info h1 {
+    font-size: 48px;
+    font-weight: 300;
+  }
+  
+  .training-sub-info {
+    margin-top: 20px;
+    font-weight: 200;
+    font-size: 18px;
+    line-height: 1.7;
+  }
+
+  .kids_zone__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    position: relative;
+    bottom: 850px;
+    width: 150%;
+  }
+  
+  .zone-image {
+    margin-top: 5px;
+  }
+  
+  .zone-image img {
+    width: 650px;
+    height: 700px;
+    position: relative;
+    right: 280px;
+    top: 100px;
+  }
+  
+  .zone-wrapper {
+    width: 150%;
+    height: 800px;
+    background-color: #1a1919;
+    margin: 0px auto;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .zone_info {
+    text-align: center;
+    margin-top: 120px;
+    position: relative;
+    right: 100px;
+  }
+  
+  .zone_info h1 {
+    font-size: 48px;
+    font-weight: 300;
+  }
+  
+  .zone_info p {
+    font-weight: 200;
+    font-size: 18px;
+    line-height: 1.8;
+  }
+
+  .tanning_info1 {
+    text-align: center;
+    margin-top: 50px;
+    position: relative;
+    right: 750px;
+    top: 100px;
+  }
+  
+  .tanning_info1 h1 {
+    font-size: 48px;
+    font-weight: 300;
+  }
+  
+  .tanning_info1 p {
+    font-weight: 200;
+    font-size: 18px;
+    line-height: 1.8;
+  }
+  
+  .tanning_sub-info {
+    font-size: 10px;
+  }
+
+  .tan1 {
+    position: relative;
+    left: 750px;
+    bottom: 5px;
+  }
+
+  .footer_container {
+    position: relative;
+    bottom: 750px;
+  }
+
+  .footer_display_images img {
+    height: 500px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .google_maps-container iframe{
+    width: 300%;
+    height: 550px;
+    position: relative;
+    right: 305px;
+    bottom: 550px;
+    border-radius: 5px;
+  }
+
+  .copyright-info span {
+    margin-top: 30px;
+    font-size: 12px;
+  }
+  
+  .copyright {
+    text-align: center;
+    position: relative;
+    bottom: 150px;
+  }
+
+  .footer-main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 150px;
+  }
+
+  .video {
+    width: 100%;
+  }
+}
+
+@media (min-width: 1401px) and (max-width: 1600px){
+  .hamburger .bar,
+  .hamburger::after,
+  .hamburger::before {
+    display: none;
+  }
+
+  .logo {
+    text-decoration: none;
+    font-size: 33px;
+    font-weight: 300;
+    position: relative;
+    right: 280px;
+  }
+
+  .wrapper {
+    width: 100%;
+    height: 750px;
+    background-color: #1a1919;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .aboutus_info {
+    text-align: center;
+    margin-top: 170px;
+  }
+
+  .aboutus_info h1 {
+    font-weight: 300;
+    margin-bottom: 50px;
+    font-size: 52px;
+  }
+  
+  .aboutus_info p {
+    position: relative;
+    bottom: 35px;
+    font-weight: 200;
+    font-size: 18px;
+    line-height: 1.8;
+  }
+
+  .aboutus-img img {
+    width: 100%;
+    height: 750px;
+  }
+
+  .classes-container {
+    margin-top: 750px;
+  }
+  
+  .classes-wrapper {
+    width: 150%;
+    height: 650px;
+    background-color: #1a1919;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    position: relative;
+    bottom: 750px;
+    right: 150px;
+  }
+  
+  .classes-info {
+    text-align: center;
+    margin-top: 30px;
+    position: relative;
+    left: 650px;
+  }
+  
+  .classes-info h1 {
+    font-size: 48px;
+    font-weight: 300;
+  }
+  
+  .classes-info p {
+    font-weight: 200;
+    font-size: 18px;
+    line-height: 1.8;
+  }
+
+  .training_img img {
+    width: 650px;
+    height: 700px;
+    position: relative;
+    top: 160px;
+  }
+
+  .training_wrapper {
+    width: 100%;
+    height: 760px;
+    background-color: #1a1919;
+    margin: 0px auto;
+    display: flex;
+    flex-direction: row-reverse;
+    position: relative;
+    bottom: 850px;
+  }
+  
+  .training_info {
+    position: relative;
+    bottom: 50px;
+    right: 250px;
+    top: 100px;
+    text-align: center;
+  }
+  
+  .training_info h1 {
+    font-size: 48px;
+    font-weight: 300;
+  }
+  
+  .training-sub-info {
+    margin-top: 20px;
+    font-weight: 200;
+    font-size: 18px;
+    line-height: 1.7;
+  }
+
+  .kids_zone__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    position: relative;
+    bottom: 850px;
+    width: 150%;
+  }
+  
+  .zone-image {
+    margin-top: 5px;
+  }
+  
+  .zone-image img {
+    width: 700px;
+    height: 700px;
+    position: relative;
+    right: 335px;
+    top: 100px;
+  }
+  
+  .zone-wrapper {
+    width: 150%;
+    height: 800px;
+    background-color: #1a1919;
+    margin: 0px auto;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .zone_info {
+    text-align: center;
+    margin-top: 120px;
+    position: relative;
+    right: 100px;
+  }
+  
+  .zone_info h1 {
+    font-size: 48px;
+    font-weight: 300;
+  }
+  
+  .zone_info p {
+    font-weight: 200;
+    font-size: 18px;
+    line-height: 1.8;
+  }
+
+  .tanning_info1 {
+    text-align: center;
+    margin-top: 50px;
+    position: relative;
+    right: 820px;
+    top: 100px;
+  }
+  
+  .tanning_info1 h1 {
+    font-size: 48px;
+    font-weight: 300;
+  }
+  
+  .tanning_info1 p {
+    font-weight: 200;
+    font-size: 18px;
+    line-height: 1.8;
+  }
+  
+  .tanning_sub-info {
+    font-size: 10px;
+  }
+
+  .tan1 {
+    position: relative;
+    left: 860px;
+    bottom: 5px;
+  }
+
+  .footer_container {
+    position: relative;
+    bottom: 750px;
+  }
+
+  .footer_display_images img {
+    height: 500px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .google_maps-container iframe{
+    width: 300%;
+    height: 550px;
+    position: relative;
+    right: 305px;
+    bottom: 550px;
+    border-radius: 5px;
+  }
+
+  .copyright-info span {
+    margin-top: 30px;
+    font-size: 12px;
+  }
+  
+  .copyright {
+    text-align: center;
+    position: relative;
+    bottom: 150px;
+  }
+
+  .footer-main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 150px;
+  }
+
+  .video {
+    width: 100%;
+  }
+
+  .nav-menu {
+    position: relative;
+    right: 65px;
+  }
+
+  .nav-menu li a {
+    font-size: 14px;
+    text-decoration: none;
+  }
+}
+
+@media (min-width: 1601px) and (max-width: 2000px){
+  .hamburger .bar,
+  .hamburger::after,
+  .hamburger::before {
+    display: none;
+  }
+
+  .logo {
+    text-decoration: none;
+    font-size: 33px;
+    font-weight: 300;
+    position: relative;
+    right: 350px;
+  }
+
+  .nav-menu {
+    position: relative;
+    right: 65px;
+  }
+
+  .nav-menu li a {
+    font-size: 14px;
+    text-decoration: none;
+  }
+
+  .wrapper {
+    width: 100%;
+    height: 700px;
+    background-color: #1a1919;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .aboutus_info {
+    text-align: center;
+    margin-top: 170px;
+  }
+
+  .aboutus_info h1 {
+    font-weight: 300;
+    margin-bottom: 50px;
+    font-size: 52px;
+  }
+  
+  .aboutus_info p {
+    position: relative;
+    bottom: 35px;
+    font-weight: 200;
+    font-size: 18px;
+    line-height: 1.8;
+  }
+
+  .aboutus-img img {
+    width: 100%;
+    height: 750px;
+  }
+
+  .classes-container {
+    margin-top: 750px;
+  }
+  
+  .classes-wrapper {
+    width: 150%;
+    height: 650px;
+    background-color: #1a1919;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    position: relative;
+    bottom: 750px;
+    right: 150px;
+  }
+  
+  .classes-info {
+    text-align: center;
+    margin-top: 30px;
+    position: relative;
+    left: 850px;
+  }
+  
+  .classes-info h1 {
+    font-size: 48px;
+    font-weight: 300;
+  }
+  
+  .classes-info p {
+    font-weight: 200;
+    font-size: 18px;
+    line-height: 1.8;
+  }
+
+  .training_img img {
+    width: 750px;
+    height: 700px;
+    position: relative;
+    top: 160px;
+  }
+
+  .training_wrapper {
+    width: 100%;
+    height: 760px;
+    background-color: #1a1919;
+    margin: 0px auto;
+    display: flex;
+    flex-direction: row-reverse;
+    position: relative;
+    bottom: 850px;
+  }
+  
+  .training_info {
+    position: relative;
+    bottom: 50px;
+    right: 450px;
+    top: 100px;
+    text-align: center;
+  }
+  
+  .training_info h1 {
+    font-size: 48px;
+    font-weight: 300;
+  }
+  
+  .training-sub-info {
+    margin-top: 20px;
+    font-weight: 200;
+    font-size: 18px;
+    line-height: 1.7;
+  }
+
+  .kids_zone__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    position: relative;
+    bottom: 850px;
+    width: 150%;
+  }
+  
+  .zone-image {
+    margin-top: 5px;
+  }
+  
+  .zone-image img {
+    width: 800px;
+    height: 700px;
+    position: relative;
+    right: 455px;
+    top: 100px;
+  }
+  
+  .zone-wrapper {
+    width: 150%;
+    height: 800px;
+    background-color: #1a1919;
+    margin: 0px auto;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .zone_info {
+    text-align: center;
+    margin-top: 120px;
+    position: relative;
+    right: 50px;
+  }
+  
+  .zone_info h1 {
+    font-size: 48px;
+    font-weight: 300;
+  }
+  
+  .zone_info p {
+    font-weight: 200;
+    font-size: 18px;
+    line-height: 1.8;
+  }
+
+  .tanning_info1 {
+    text-align: center;
+    margin-top: 50px;
+    position: relative;
+    right: 920px;
+    top: 100px;
+  }
+  
+  .tanning_info1 h1 {
+    font-size: 48px;
+    font-weight: 300;
+  }
+  
+  .tanning_info1 p {
+    font-weight: 200;
+    font-size: 18px;
+    line-height: 1.8;
+  }
+  
+  .tanning_sub-info {
+    font-size: 10px;
+  }
+
+  .tan1 {
+    position: relative;
+    left: 1060px;
+    bottom: 5px;
+  }
+
+  .footer_container {
+    position: relative;
+    bottom: 750px;
+  }
+
+  .footer_display_images img {
+    height: 500px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .google_maps-container iframe{
+    width: 400%;
+    height: 550px;
+    position: relative;
+    right: 465px;
+    bottom: 550px;
+    border-radius: 5px;
+  }
+
+  .copyright-info span {
+    margin-top: 30px;
+    font-size: 12px;
+  }
+  
+  .copyright {
+    text-align: center;
+    position: relative;
+    bottom: 150px;
+  }
+
+  .footer-main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 180px;
+  }
+
+  .video {
+    width: 100%;
+  }
+
+}
